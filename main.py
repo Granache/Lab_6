@@ -11,7 +11,10 @@ def encode_password(user_password):
     for character in user_password:
         #Convert the character into an integer, add three to it, and convert it back to a string
         #Add the character to the encoded password string
-        encoded_password += str(int(character) + 3)
+        if int(character) < 7:
+            encoded_password += str(int(character) + 3)
+        else:
+            encoded_password += str((int(character) + 3) - 10)
     #Return the encoded password
     return encoded_password
 
@@ -46,8 +49,10 @@ def main():
         #If the user selects 2:
         elif menu_choice == 2:
             #Invoke the decode function
+
             #FIX ME: invoke the decode function, inputting the encoded password variable as a parameter,
             # and set the variable decoded_password equal to the output of the function
+
             #Print the encoded password and the original password
             print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}\n")
 
