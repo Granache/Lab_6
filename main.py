@@ -16,6 +16,9 @@ def encode_password(user_password):
     return encoded_password
 
 
+#Define decode function
+#FIX ME: Define and implement a function that takes in an encoded password as a parameter and returns a decoded password
+
 #Define main function
 def main():
     #Initialize variables
@@ -43,6 +46,8 @@ def main():
         #If the user selects 2:
         elif menu_choice == 2:
             #Invoke the decode function
+            #FIX ME: invoke the decode function, inputting the encoded password variable as a parameter,
+            # and set the variable decoded_password equal to the output of the function
             #Print the encoded password and the original password
             print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}\n")
 
