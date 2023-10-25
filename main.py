@@ -20,7 +20,11 @@ def encode_password(user_password):
 
 
 #Define decode function
-#FIX ME: Define and implement a function that takes in an encoded password as a parameter and returns a decoded password
+def decode_password(password):
+    decoded = ""
+    for char in password:
+        decoded += str((int(char)-3+10)%10)
+    return decoded
 
 #Define main function
 def main():
@@ -46,15 +50,17 @@ def main():
             encoded_password = encode_password(user_password)
             #Print that the password has been encoded and stored
             print("Your password has been encoded and stored!\n")
+            # print(f"Encoded Password: {encoded_password}")
         #If the user selects 2:
         elif menu_choice == 2:
             #Invoke the decode function
+            decoded_password = decode_password(encoded_password)
 
             #FIX ME: invoke the decode function, inputting the encoded password variable as a parameter,
             # and set the variable decoded_password equal to the output of the function
 
             #Print the encoded password and the original password
-            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}\n")
+            print(f"The encoded password is {encoded_password}, and the decoded password is {decoded_password}\n")
 
         #If the user selects 3, quit
         elif menu_choice == 3:
