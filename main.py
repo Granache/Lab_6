@@ -15,6 +15,7 @@ def encode_password(user_password):
     #Return the encoded password
     return encoded_password
 
+
 #Define main function
 def main():
     #Initialize variables
@@ -40,10 +41,14 @@ def main():
             #Print that the password has been encoded and stored
             print("Your password has been encoded and stored!\n")
         #If the user selects 2:
-        #Invoke the decode function
-        #Print the encoded password and the original password
-        #If the user selects 3, quit
+        elif menu_choice == 2:
+            #Invoke the decode function
+            #Print the encoded password and the original password
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}\n")
 
+        #If the user selects 3, quit
+        elif menu_choice == 3:
+            break
 
 #Invoke Main
 if __name__ == "__main__":
